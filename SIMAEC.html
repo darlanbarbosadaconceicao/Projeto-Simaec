@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>SIMAEC - Entrar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F8F2F2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #000000;
+        }
+
+        header {
+            background-color: #F8F2F2;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 120px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .container {
+            background: #b11b1b;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 30px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #f5f6f7;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #003b5c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #7e0606;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        .btn-emergency {
+            background-color: #7e0606;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .btn-emergency:hover {
+            background-color: darkred;
+        }
+
+        p {
+            text-align: center;
+            color: #fffefe;
+        }
+
+        a {
+            color: #f0f2f3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .checkbox-group {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            color: #f0f2f3;
+        }
+
+        .checkbox-group input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <header>
+        <div class="logo">
+            <img src="IMG-20250328-WA0082.jpg" alt="Logo Health & Heart">2]
+            <h1>SIMAEC</h1>
+        </div>
+    </header>
+    <hr style="border: 1px solid #000000; width: 100%; margin-top: 20px;">
+
+    <div class="container">
+        <div class="form-container" id="login-form-container">
+            <div class="form-header">
+                <h2>Login</h2>
+            </div>
+            <form id="login-form">
+                <input type="text" id="login-name" placeholder="Nome Completo" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p>Não tem uma conta? <a href="#cadastro" onclick="toggleForms()">Cadastre-se</a></p>
+                <button type="button" class="btn-emergency" onclick="emergencyRedirect()">EMERGENCIA CLIQUE
+                    AQUI!</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="cadastro-form-container" style="display: none;">
+            <div class="form-header">
+                <h2>Cadastro</h2>
+            </div>
+            <form id="register-form">
+                <input type="text" id="register-name" placeholder="Nome Completo" required>
+                <input type="date" id="register-nascimento" placeholder="Data de Nascimento" required>
+                <input type="password" id="register-password" placeholder="Senha" required>
+
+                <div class="checkbox-group">
+                    <label for="heart-condition">Possui algum problema cardíaco?</label>
+                    <input type="checkbox" id="heart-condition" name="heart-condition">
+                </div>
+
+                <div class="checkbox-group">
+                    <label for="hypertension">É hipertenso(a)?</label>
+                    <input type="checkbox" id="hypertension" name="hypertension">
+                </div>
+
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#login" onclick="toggleForms()">Entrar</a></p>
+
+            </form>
+        </div>
+        <script>
+            document.getElementById("register-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const nome = document.getElementById("register-name").value;
+                const nascimento = document.getElementById("register-nascimento").value;
+                const senha = document.getElementById("register-password").value;
+                const problema_cardiaco = document.getElementById("heart-condition").checked;
+                const hipertenso = document.getElementById("hypertension").checked;
+
+                fetch("http://localhost:3000/cadastro", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        nome,
+                        nascimento,
+                        senha,
+                        problema_cardiaco,
+                        hipertenso
+                    })
+                })
+                    .then(response => {
+                        if (!response.ok) throw new Error("Erro ao cadastrar");
+                        return response.text();
+                    })
+                    .then(data => {
+                        alert(data);
+                       
+                        document.getElementById("register-form").reset();
+                    })
+                    .catch(error => {
+                        alert("Erro ao cadastrar: " + error.message);
+                    });
+            });
+        </script>
+
+    </div>
+
+    <script>
+        function toggleForms() {
+            const loginFormContainer = document.getElementById('login-form-container');
+            const registerFormContainer = document.getElementById('cadastro-form-container');
+
+            if (loginFormContainer.style.display === "none") {
+                loginFormContainer.style.display = "block";
+                registerFormContainer.style.display = "none";
+            } else {
+                loginFormContainer.style.display = "none";
+                registerFormContainer.style.display = "block";
+            }
+        }
+
+        function emergencyRedirect() {
+            window.location.href = "SIMAEC MENU.html";
+        }
+
+        document.getElementById("register-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("register-name").value;
+            const senha = document.getElementById("register-password").value;
+
+            if (!nome || !senha) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+
+            localStorage.setItem(nome, senha);
+
+            alert("Cadastro realizado com sucesso!");
+            toggleForms()
+        });
+
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("login-name").value;
+            const senha = document.getElementById("login-password").value;
+
+            const senhaSalva = localStorage.getItem(nome);
+
+            if (senhaSalva && senhaSalva === senha) {
+                window.location.href = "SIMAEC MENU.html";
+            } else {
+                alert("Nome ou senha incorretos!");
+            }
+        });
+    </script>
+</body>
+
+</html>

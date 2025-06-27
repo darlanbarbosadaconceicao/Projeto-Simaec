@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintomas de risco</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+         body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F8F2F2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      background-color: #F8F2F2;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: black;
+      margin-left: 10px;
+    }
+
+    .container {
+      background: #b11b1b;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 1200px;
+      padding: 30px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      color: white;
+    }
+
+    details.sintoma-box {
+      background: none;
+      border-radius: 5px;
+      padding: 0;
+      color: white;
+      box-sizing: border-box;
+      font-size: 1.1em;
+      transition: all 0.3s ease-in-out;
+    }
+
+    details summary {
+      background-color: white;
+      color: black;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary {
+      margin-bottom: 10px;
+    }
+
+    details p {
+      padding: 10px;
+      background-color: #fff;
+      color: black;
+      border-radius: 0 0 5px 5px;
+      font-size: 1em;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+    }
+
+    .botao-voltar {
+      width: 90%;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 15px;
+      background-color: #7e0606;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .botao-voltar:hover {
+      background-color: #a80808;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+
+        
+    </style>
+    <script>
+        function voltarMenu() {
+            window.history.back();
+        }
+         document.addEventListener("DOMContentLoaded", function () {
+      const detalhes = document.querySelectorAll("details");
+      detalhes.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+          detalhes.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
+        });
+      });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="IMG-20250328-WA0082.jpg" alt="Health & Heart Logo">
+        <h1>Sintomas de Risco</h1>
+    </header>
+    <hr style="border: 1px solid #000000; width: 100%; margin-top: 20px;">
+
+    <div class="container">
+
+       <details class="sintoma-box">
+    <summary><h2>Infarto</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Dor intensa no peito, podendo irradiar para o braço esquerdo, mandíbula ou costas.<br>
+        ✔ Sensação de aperto ou queimação no peito.<br>
+        ✔ Suor frio, náusea e tontura.<br>
+        ✔ Falta de ar e sensação de desmaio iminente.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Chame imediatamente o serviço de emergência (192 – SAMU).<br>
+        🔹 Afrouxe roupas apertadas e mantenha a pessoa calma.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Acidente Vascular Cerebral (AVC)</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Fraqueza ou dormência em um lado do corpo.<br>
+        ✔ Dificuldade para falar ou compreender.<br>
+        ✔ Perda de equilíbrio ou coordenação.<br>
+        ✔ Forte dor de cabeça súbita sem causa aparente.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Chame a emergência imediatamente.<br>
+        🔹 Mantenha a pessoa deitada com a cabeça elevada.<br>
+        🔹 Não ofereça alimentos ou líquidos.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Hipoglicemia</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Tremores e sudorese excessiva.<br>
+        ✔ Fraqueza, tontura e confusão mental.<br>
+        ✔ Palpitações e irritabilidade.<br>
+        ✔ Em casos graves, desmaio ou convulsões.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Ofereça um alimento ou bebida açucarada.<br>
+        🔹 Se a pessoa estiver inconsciente, chame emergência.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Intoxicação Alimentar</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Náusea, vômito e diarreia intensa.<br>
+        ✔ Dor abdominal e cólicas.<br>
+        ✔ Febre e desidratação.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Beba bastante água.<br>
+        🔹 Evite alimentos sólidos.<br>
+        🔹 Busque ajuda médica se houver sinais de gravidade.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Crise Convulsiva</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Contrações involuntárias dos músculos.<br>
+        ✔ Perda de consciência.<br>
+        ✔ Salivação intensa ou mordida na língua.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Proteja a cabeça da pessoa.<br>
+        🔹 Não contenha os movimentos.<br>
+        🔹 Chame a emergência se durar mais de 5 minutos.
+    </p>
+</details>
+<details class="sintoma-box">
+    <summary><h2>Choque Anafilático</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Inchaço no rosto, lábios ou garganta.<br>
+        ✔ Dificuldade para respirar.<br>
+        ✔ Queda da pressão arterial.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Chame a emergência imediatamente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Desidratação Grave</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Boca seca, sede intensa.<br>
+        ✔ Olhos fundos e pele seca.<br>
+        ✔ Fraqueza, tontura ou confusão mental.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Ofereça soro de reidratação oral.<br>
+        🔹 Procure atendimento médico urgente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Parada Cardiorrespiratória</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Inconsciência súbita.<br>
+        ✔ Ausência de pulso e respiração.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Inicie massagem cardíaca imediatamente.<br>
+        🔹 Chame o serviço de emergência.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Queimaduras Graves</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Pele com bolhas, escura ou carbonizada.<br>
+        ✔ Dor intensa ou ausência de dor (quando muito profunda).<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Resfrie a área com água corrente.<br>
+        🔹 Cubra com pano limpo e úmido.<br>
+        🔹 Chame socorro.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Traumatismo Craniano</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Perda de consciência.<br>
+        ✔ Vômito, sonolência ou confusão.<br>
+        ✔ Sangue ou líquido pelo nariz/ouvidos.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Mantenha a pessoa deitada e imóvel.<br>
+        🔹 Chame socorro imediatamente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Hemorragia Externa</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Sangramento abundante e contínuo.<br>
+        ✔ Pele pálida e fria.<br>
+        ✔ Tontura ou desmaio.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Faça compressão direta no local.<br>
+        🔹 Eleve o membro afetado (se possível).<br>
+        🔹 Busque atendimento de urgência.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Envenenamento</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Náusea, vômito e dor abdominal.<br>
+        ✔ Confusão mental e dificuldade respiratória.<br>
+        ✔ Convulsões ou inconsciência.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Identifique o agente causador, se possível.<br>
+        🔹 Não provoque vômito sem orientação médica.<br>
+        🔹 Chame a emergência e leve a embalagem do produto.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Afogamento</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Dificuldade respiratória ou inconsciência após submersão.<br>
+        ✔ Cianose (pele azulada), tosse com água ou espuma.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Retire a pessoa da água com segurança.<br>
+        🔹 Inicie respiração boca a boca e massagem cardíaca, se necessário.<br>
+        🔹 Chame ajuda médica imediatamente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Asfixia</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Incapacidade de falar ou tossir.<br>
+        ✔ Pele azulada e expressão de pânico.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Realize a manobra de Heimlich (compressões abdominais).<br>
+        🔹 Chame o serviço de emergência se não for resolvido rapidamente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Insuficiência Respiratória</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Respiração rápida e superficial.<br>
+        ✔ Cianose (lábios ou unhas azuladas).<br>
+        ✔ Confusão ou sonolência.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Mantenha a pessoa sentada ou semi-sentada.<br>
+        🔹 Afrouxe roupas apertadas.<br>
+        🔹 Acione a emergência imediatamente.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Insolação</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Temperatura corporal elevada (acima de 39°C).<br>
+        ✔ Pele quente e seca, confusão mental.<br>
+        ✔ Tontura, desmaio ou convulsões.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Leve a pessoa para um local fresco e ventilado.<br>
+        🔹 Aplique compressas frias ou ofereça líquidos frios (se consciente).<br>
+        🔹 Chame ajuda médica.
+    </p>
+</details>
+
+<details class="sintoma-box">
+    <summary><h2>Crise de Ansiedade Aguda</h2></summary>
+    <p><b>Sintomas:</b><br>
+        ✔ Respiração ofegante, palpitações.<br>
+        ✔ Sensação de pânico ou morte iminente.<br>
+        ✔ Tremores, sudorese, tontura.<br><br>
+        <b>Ação imediata:</b><br>
+        🔹 Mantenha a pessoa calma e respire com ela lentamente.<br>
+        🔹 Leve para um local tranquilo.<br>
+        🔹 Busque ajuda médica se os sintomas persistirem.
+    </p>
+</details>
+
+
+
+    <button class="botao-voltar" onclick="voltarMenu()">VOLTAR AO MENU</button>
+</body>
+</html>

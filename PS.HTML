@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Socorros</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F8F2F2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            background-color: #F8F2F2;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: black;
+            margin-left: 10px;
+        }
+
+        .container {
+            background: #b11b1b;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1200px;
+            padding: 30px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            color: white;
+        }
+
+       details {
+  flex: 1 1 45%;
+  max-width: 45%;
+  padding: 0;
+  color: black;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 0;
+}
+
+details summary {
+  background-color: white;     
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details[open] {
+  background-color: white;     
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+details[open] summary {
+  margin-bottom: 10px;          
+}
+
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+
+        .botao-voltar {
+            width: 90%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #7e0606;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .botao-voltar:hover {
+            background-color: #7e0606;
+        }
+
+        @media (max-width: 768px) {
+            details {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="IMG-20250328-WA0082.jpg" alt="Health & Heart Logo">         
+        <h1>Primeiros Socorros</h1>
+    </header>
+    <hr style="border: 1px solid #000000; width: 100%; margin-top: 20px;">
+
+    <div class="container">
+        <details>
+            <summary>Parada Cardíaca</summary>
+            <img src="https://i.gifer.com/HdCx.gif" alt="RCP">
+            <p><b>1. Verifique a Segurança do Local:</b> Certifique-se de que não há riscos no ambiente.</p>
+            <p><b>2. Verifique a Responsividade:</b> Toque nos ombros e pergunte em voz alta: “Você está bem?”</p>
+            <p><b>3. Peça Ajuda:</b> Grite por socorro e ligue para o SAMU (192) no viva-voz.</p>
+            <p><b>4. Verifique a Respiração:</b> Veja se o tórax se movimenta ou se há respiração normal por até 10 segundos.</p>
+            <p><b>5. Inicie as Compressões Torácicas:</b></p>
+            <ul>
+                <li>Deite a vítima de costas sobre uma superfície firme.</li>
+                <li>Ajoelhe-se ao lado dela, na altura do tórax.</li>
+                <li>Coloque o calcanhar da sua mão dominante no centro do peito, entre os mamilos (sobre o osso esterno).</li>
+                <li>Coloque a outra mão por cima, entrelace os dedos e mantenha os braços esticados.</li>
+                <li>Use o peso do corpo para comprimir o tórax a uma profundidade de 5 a 6 cm.</li>
+                <li>Frequência: 100 a 120 compressões por minuto (ritmo da música “Stayin’ Alive”).</li>
+                <li>Permita o retorno total do tórax após cada compressão.</li>
+            </ul>
+            <p><b>6. Continue as compressões:</b> Não pare até que a ajuda chegue, a vítima mostre sinais de vida ou você esteja exausto.</p>
+            
+        </details>
+
+        <details>
+            <summary>AVC (Derrame)</summary>
+            <img src="imagem chatgpt 1.png" alt="AVC">
+            <p><b>1. Reconheça os sinais de AVC (Teste SAMU):</b></p>
+            <ul>
+                <li><b>S – Sorriso:</b> Peça para a pessoa sorrir. Um lado do rosto está caído?</li>
+                <li><b>A – Abraço:</b> Peça para levantar os dois braços. Um deles não sobe?</li>
+                <li><b>M – Música (fala):</b> A fala está enrolada, lenta ou confusa?</li>
+                <li><b>U – Urgente:</b> Esses sinais indicam emergência médica. Ligue para o SAMU imediatamente!</li>
+            </ul>
+        
+            <p><b>2. Ligue para o SAMU (192):</b> Explique que suspeita de AVC e informe local, nome e hora de início dos sintomas.</p>
+        
+            <p><b>3. Deite a pessoa de lado:</b> Se estiver consciente, coloque-a na posição lateral de segurança com a cabeça levemente elevada.</p>
+        
+            <p><b>4. Não ofereça alimentos, líquidos ou medicamentos:</b> A pessoa pode estar com dificuldade para engolir e pode engasgar.</p>
+        
+            <p><b>5. Anote o horário de início dos sintomas:</b> Esse dado é essencial para a equipe médica decidir o tratamento adequado.</p>
+        
+            <p><b>6. Fique calmo e acompanhe a vítima:</b> Converse com ela, observe se piora e aguarde o socorro.</p>
+        </details>
+        
+
+        <details>
+            <summary>Engasgo</summary>
+            <img src="https://image.tuasaude.com/media/article/qc/wi/manobra-de-heimlich_58204.jpg?width=686&height=487" alt="Manobra de Heimlich">
+            <p><b>1. Verifique se há Tosse:</b> <br> Se a vítima conseguir tossir, incentive-a a continuar tossindo.</p> 
+            <p><b>2. Posicione-se atrás da vítima:</b> <br> Fique em pé atrás da pessoa, com os braços ao redor da cintura dela.</p>
+            <p><b>3. Encontre o ponto de compressão:</b> <br> Coloque uma mão fechada em punho acima do umbigo e abaixo do esterno (no centro do peito). Coloque a outra mão por cima, entrelace os dedos.</p>
+            <p><b>4. Realize compressões abdominais:</b> <br> Com força e rapidez, faça movimentos para dentro e para cima, como se estivesse tentando levantar a pessoa. Repita até que o objeto seja expelido ou até a pessoa perder a consciência.</p>
+            <p><b>5. Se a vítima desmaiar:</b>  <br>Deite-a no chão e ligue imediatamente para o SAMU (192). Inicie compressões torácicas (RCP).</p>
+        </details>
+        <details>
+            <summary>Desengasgo em Bebês</summary>
+            <img src="ChatGPT Image 17 de abr. de 2025.png" alt="Manobra de Desengasgo em Bebês">
+            <p><b>1. Avalie a situação:</b> <br> Verifique se o bebê está realmente engasgado. O bebê deve estar com a boca e nariz fechados e sem conseguir respirar, chorar ou tossir.</p>
+            
+            <p><b>2. Coloque o bebê de bruços no seu antebraço:</b> <br> Sente-se em uma cadeira e deite o bebê de bruços sobre seu antebraço, com a cabeça mais baixa que o corpo. Apoie a cabeça e pescoço do bebê com a sua mão, mantendo o tronco dele apoiado na sua perna.</p>
+            
+            <p><b>3. Dê tapas nas costas:</b> <br> Com a palma da mão, dê 5 tapas fortes nas costas, entre as omoplatas do bebê. Certifique-se de que os tapas sejam firmes, mas cuidadosos para não machucar o bebê.</p>
+            
+            <p><b>4. Se o objeto não sair, vire o bebê de barriga para cima:</b> <br> Se o engasgo não for desfeito, vire o bebê suavemente de barriga para cima e faça 5 compressões torácicas. Coloque dois dedos no centro do peito do bebê (logo abaixo da linha do peito) e empurre para baixo com cuidado e firmeza, cerca de 4 cm.</p>
+            
+            <p><b>5. Repita até o objeto sair ou o bebê desmaiar:</b> <br> Se o bebê continuar engasgado, repita as etapas 2 a 4. Se o bebê desmaiar, inicie a reanimação cardiopulmonar (RCP) e chame o SAMU (192) imediatamente.</p>
+            
+            <p><b>Importante:</b> <br> Nunca tente retirar o objeto diretamente da boca, pois isso pode empurrá-lo ainda mais para dentro das vias aéreas.</p>
+        </details>
+
+        
+            <details>
+                <summary>Desengasgo em Crianças</summary>
+                <img src="https://www.hospitalpaulista.com.br/wp-content/uploads/2020/05/7-Manobra-de-Heimlich-em-criancas.jpg" alt="Manobra de Desengasgo em Crianças">
+                <p><b>1. Avalie a situação:</b> <br> Verifique se a criança está realmente engasgada. Ela deve estar com dificuldade para respirar, tossir ou falar.</p>
+                
+                <p><b>2. Peça ajuda:</b> <br>Se a criança está consciente, peça para ela tossir, mas se não conseguir, peça ajuda imediatamente ou ligue para o SAMU (192).</p>
+                
+                <p><b>3. Coloque a criança em posição adequada:</b> <br> Se a criança tiver mais de 1 ano, coloque-a de frente para você, com a cabeça levemente para baixo. Apoie o peito dela com uma mão e segure a mandíbula com a outra para estabilizar a cabeça.</p>
+                
+                <p><b>4. Dê tapas nas costas:</b> <br>Com a criança inclinada para frente, dê 5 tapas firmes nas costas entre as omoplatas, utilizando a base da sua mão. Se o objeto não sair, siga para a próxima etapa.</p>
+                
+                <p><b>5. Realize compressões abdominais (Manobra de Heimlich):</b> <br> Se as costas não resolverem, coloque as mãos no centro do peito da criança, logo acima do umbigo. Faça 5 compressões abdominais fortes e rápidas, empurrando para dentro e para cima.</p>
+                
+                <p><b>6. Repita os passos até o objeto ser expelido ou a criança perder a consciência:</b> Se a criança desmaiar, inicie a reanimação cardiopulmonar (RCP) e chame imediatamente o SAMU (192).</p>
+                
+                <p><b>Importante:</b> Se a criança for muito pequena (menos de 1 ano), a manobra de Heimlich não deve ser aplicada dessa forma. Em vez disso, use a técnica apropriada para bebês (tapinhas nas costas e compressões torácicas suaves). Se não tiver certeza do procedimento, sempre chame a emergência.</p>
+            </details>
+            
+        </details>
+        
+        <details>
+            <summary>Quedas</summary>
+            <img src="ChatGPT Image 17 de abr. de 2025, 18_02_04.png" alt="Queda">
+            <p><b>1. Verifique a segurança do local:</b> <br> Certifique-se de que o ambiente está seguro para a vítima e para você.</p>
+            <p><b>2. Avalie a consciência da vítima:</b> <br> Pergunte: “Você está bem? Onde dói?”. Se ela estiver inconsciente ou com dor intensa, não a mova.</p>
+            <p><b>3. Evite movimento excessivo:</b> <br> Se houver sangramentos, aplique compressas limpas. Não mova a vítima se houver suspeita de fraturas na coluna ou cabeça.</p>
+            <p><b>4. Acione o SAMU (192):</b> <br> Informe sobre a queda e a gravidade dos sintomas (sangramentos, fraturas ou perda de consciência).</p>
+        </details>
+        
+        
+    </div>
+
+    <button class="botao-voltar" onclick="voltarMenu()">VOLTAR AO MENU</button>
+
+   <script>
+    // Permite apenas um <details> aberto por vez
+    window.addEventListener('DOMContentLoaded', () => {
+        const allDetails = document.querySelectorAll('details');
+
+        allDetails.forEach(details => {
+            details.addEventListener('toggle', () => {
+                if (details.open) {
+                    allDetails.forEach(other => {
+                        if (other !== details) {
+                            other.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+    function voltarMenu() {
+        window.location.href = "SIMAEC MENU.html";
+    }
+</script>
+
+    
+</body>
+</html>
